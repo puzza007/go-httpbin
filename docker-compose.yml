@@ -1,0 +1,12 @@
+version: '2.3'
+
+services:
+
+  httpbin:
+    container_name: httpbin
+    build: .
+    restart: always
+    labels:
+      - autoheal=true
+    ports:
+      - "8080:8080"
